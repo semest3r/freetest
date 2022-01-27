@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+    <link rel="stylesheet" href="{%  static  'style/css/output.css' %}">
+    <title></title>
+</head>
+<body>
+    <div class="container grid mx-auto">
+        {% include 'header/header.html' %}
+    
+        {% block content %}
+        {% endblock content%}
+        
+        {% include 'footer/footer.html'%}
+    </div>
+
+</body>
+</html>
