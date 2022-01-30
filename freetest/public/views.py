@@ -3,11 +3,14 @@ from pyexpat import model
 from venv import create
 from django.shortcuts import render
 from .forms import ContactForm
-from .models import Contact
+from .models import *
 
 
 def home(request):
-    context = {}
+    beritas = Berita.objects.all().order_by('-date')
+    context = {
+        'beritas': beritas,
+    }
     return render(request, 'content/home.html', context)
 
 def content1(request):
@@ -19,7 +22,10 @@ def content2(request):
     return render(request, 'content/content2.html', context)
 
 def content3(request):
-    context = {}
+    beritas = Berita.objects.order_by('-date')
+    context = {
+        'beritas': beritas,
+    }
     return render(request, 'content/content3.html', context)
 
 def content4(request):

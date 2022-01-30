@@ -1,5 +1,23 @@
 {% extends 'base/main.html' %}
+{% load static %}
+
+
+
 {% block content %}
-<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum adipisci sed mollitia ex ab. Corporis non repellendus accusantium officia minus, accusamus atque nostrum, saepe nemo alias, illum culpa. Inventore eum quidem sed praesentium eius. Quae fuga dolorem quam ipsa dolorum odit? Sed explicabo eaque minus temporibus ab fuga cum ratione tenetur commodi, id maiores natus ut corporis non sit ea eius mollitia velit, dolore fugit, blanditiis officia ipsum. Vitae praesentium reiciendis corporis, eos, nulla perspiciatis unde nemo dicta totam vero saepe. Voluptas, reiciendis ab! Necessitatibus deleniti debitis dolore odit autem fugiat dolores aperiam beatae dicta consequatur reiciendis amet sequi laboriosam cumque laudantium possimus esse ex exercitationem repudiandae, non in ut maxime. Ducimus eius, nesciunt eum nostrum consectetur quos facilis autem expedita quisquam, iusto corrupti eos delectus perspiciatis fugit sequi a laudantium ut earum iure blanditiis quibusdam ipsam provident itaque numquam. Blanditiis nostrum ipsam pariatur aperiam, magnam provident itaque distinctio expedita deleniti deserunt maxime id saepe asperiores velit. Error minus nisi modi sint dolor porro fugiat autem tempora incidunt suscipit? Deleniti quibusdam eveniet enim necessitatibus minima esse ad omnis dolorum aliquid, animi quod voluptatibus impedit rerum, sit, reiciendis iusto. Iusto earum enim magnam assumenda magni consectetur hic suscipit iure maiores omnis!
-</p>
+<div class="container p-5 shadow-md shadow-slate-600 w-5/6 h-full self-start mx-auto bg-stone-100">
+    <div class="p-5">
+        <section>
+            <p class="mt-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum adipisci sed mollitia ex ab. Corporis non repellendus accusantium officia minus, accusamus atque nostrum, saepe nemo alias, illum culpa. Inventore eum quidem sed praesentium eius. Quae fuga dolorem quam ipsa dolorum odit? Sed explicabo eaque minus temporibus ab fuga cum ratione tenetur commodi, id maiores natus ut corporis non sit ea eius mollitia velit, dolore fugit, blanditiis officia ipsum. Vitae praesentium reiciendis corporis, eos, nulla perspiciatis unde nemo dicta totam vero saepe. Voluptas, reiciendis ab! Necessitatibus deleniti debitis dolore odit autem fugiat dolores aperiam beatae dicta consequatur reiciendis amet sequi laboriosam cumque laudantium possimus esse ex exercitationem repudiandae, non in ut maxime. Ducimus eius, nesciunt eum nostrum consectetur quos facilis autem expedita quisquam, iusto corrupti eos delectus perspiciatis fugit sequi a laudantium ut earum iure blanditiis quibusdam ipsam provident itaque numquam. Blanditiis nostrum ipsam pariatur aperiam, magnam provident itaque distinctio expedita deleniti deserunt maxime id saepe asperiores velit. Error minus nisi modi sint dolor porro fugiat autem tempora incidunt suscipit? Deleniti quibusdam eveniet enim necessitatibus minima esse ad omnis dolorum aliquid, animi quod voluptatibus impedit rerum, sit, reiciendis iusto. Iusto earum enim magnam assumenda magni consectetur hic suscipit iure maiores omnis!
+            </p>
+            <img src="{% static 'style/img/' %}{{ berita.tumbnail }}">
+        </section>
+
+        <br>
+        <br>
+        <p class="mt-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum adipisci sed mollitia ex ab. Corporis non repellendus accusantium officia minus, accusamus atque nostrum, saepe nemo alias, illum culpa. Inventore eum quidem sed praesentium eius. Quae fuga dolorem quam ipsa dolorum odit? Sed explicabo eaque minus temporibus ab fuga cum ratione tenetur commodi, id maiores natus ut corporis non sit ea eius mollitia velit, dolore fugit, blanditiis officia ipsum. Vitae praesentium reiciendis corporis, eos, nulla perspiciatis unde nemo dicta totam vero saepe. Voluptas, reiciendis ab! Necessitatibus deleniti debitis dolore odit autem fugiat dolores aperiam beatae dicta consequatur reiciendis amet sequi laboriosam cumque laudantium possimus esse ex exercitationem repudiandae, non in ut maxime. Ducimus eius, nesciunt eum nostrum consectetur quos facilis autem expedita quisquam, iusto corrupti eos delectus perspiciatis fugit sequi a laudantium ut earum iure blanditiis quibusdam ipsam provident itaque numquam. Blanditiis nostrum ipsam pariatur aperiam, magnam provident itaque distinctio expedita deleniti deserunt maxime id saepe asperiores velit. Error minus nisi modi sint dolor porro fugiat autem tempora incidunt suscipit? Deleniti quibusdam eveniet enim necessitatibus minima esse ad omnis dolorum aliquid, animi quod voluptatibus impedit rerum, sit, reiciendis iusto. Iusto earum enim magnam assumenda magni consectetur hic suscipit iure maiores omnis!
+        </p>
+    </div>
+    
+</div>
+
 {% endblock content%}
