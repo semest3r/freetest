@@ -1,5 +1,25 @@
 {% extends 'base/main.html' %}
 
 {% block content %}
-<h1>content1</h1>
+
+<div>
+    <form class="mt-8 space-y-6" method="POST">
+        {% csrf_token %}
+        {{ form.nama }}
+        {% for question in questions %}
+        <div>
+            {{ question.pertanyaan }}
+            {{ form.pilihan }}
+        </div>
+        {% endfor %}
+        <button type="submit">Submit</button>
+    </form>
+</div>
+<hr>
+<div>
+
+    {% for choice in choices %}
+    <p>{{ choice.pilihan }}</p>
+    {% endfor %}
+</div>
 {% endblock content%}

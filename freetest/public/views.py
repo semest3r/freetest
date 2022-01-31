@@ -2,7 +2,7 @@ from datetime import date
 from pyexpat import model
 from venv import create
 from django.shortcuts import render
-from .forms import ContactForm
+from .forms import *
 from .models import *
 
 
@@ -14,7 +14,18 @@ def home(request):
     return render(request, 'content/home.html', context)
 
 def content1(request):
-    context = {}
+    form = ChoiceForm()
+    if request.method == 'POST':
+        form = ChoiceForm(request.POST)
+        if form.is_valid():
+            form.save()
+    choices = Choice.objects.all().order_by('id')
+    questions = Question.objects.all().order_by('id')
+    context = {
+        'questions' : questions,
+        'form' : form,
+        'choices' : choices
+    }
     return render(request, 'content/content1.html', context)
     
 def content2(request):
