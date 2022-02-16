@@ -1,6 +1,4 @@
-from datetime import date
-from pyexpat import model
-from venv import create
+from django.http import HttpResponse
 from django.shortcuts import render
 from .forms import *
 from .models import *
@@ -17,18 +15,25 @@ def content1(request):
     form = ChoiceForm()
     if request.method == 'POST':
         form = ChoiceForm(request.POST)
-        if form.is_valid():
+        if form.is_valid(): 
             form.save()
-    choices = Choice.objects.all().order_by('id')
-    questions = Question.objects.all().order_by('id')
+
+    choices = Choice.objects.all()
+    questions = Question.objects.order_by('id')
     context = {
         'questions' : questions,
         'form' : form,
-        'choices' : choices
+        'choices' : choices,
+        'obj' : obj,
     }
     return render(request, 'content/content1.html', context)
     
 def content2(request):
+    obj, created = Person.objects.update_or_create(
+    first_name='John', last_name='Lennon',
+    defaults={'first_name': 'Bob'},
+) 
+
     context = {}
     return render(request, 'content/content2.html', context)
 

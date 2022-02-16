@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%  static  'style/css/output.css' %}">
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="grid grid-rows-4 grid-flow-col min-h-screen">
+        <div class="row-span-4 bg-slate-500 w-fit p-5">
+            {% include 'html/navbar.html' %}
+        </div>
+        <div class="bg-slate-300">
+            {% include 'html/header.html' %}
+        </div>  
+        <div class="row-span-2 bg min-h-full ">
+            {% block content %}
+            {% endblock %}
+        </div>  
+        <div class="row-start-2 row-end-4 bg-slate-800">
+            {% include 'html/footer.html' %}
+        </div>
+    </div>
+</body>
+</html>

@@ -6,12 +6,12 @@
     <form class="mt-8 space-y-6" method="POST">
         {% csrf_token %}
         {{ form.nama }}
-        {% for question in questions %}
         <div>
-            {{ question.pertanyaan }}
+            {% for question in questions %}
+            {{ form.pertanyaan }}
             {{ form.pilihan }}
+            {% endfor %}
         </div>
-        {% endfor %}
         <button type="submit">Submit</button>
     </form>
 </div>
@@ -19,6 +19,7 @@
 <div>
 
     {% for choice in choices %}
+    <p>{{ choice.pertanyaan }} </p>
     <p>{{ choice.pilihan }}</p>
     {% endfor %}
 </div>

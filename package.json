@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npx tailwindcss -i ./freetest/templates/style/css/input.css -o ./freetest/templates/style/css/output.css --watch"
+    "dev": "npx tailwindcss -i ./adminweb/templates/style/css/input.css -o ./adminweb/templates/style/css/output.css --watch"
   },
   "keywords": [],
   "author": "",

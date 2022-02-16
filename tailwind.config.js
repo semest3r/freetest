@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["./freetest/templates/**/*.html"],
+  content: ["./adminweb/templates/**/*.html"],
   theme: {
     extend: {},
   },

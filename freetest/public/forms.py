@@ -1,5 +1,6 @@
 from logging import PlaceHolder
 from tkinter import Widget
+from itertools import islice
 from django import forms
 from .models import *
 
@@ -19,7 +20,7 @@ class ChoiceForm(forms.ModelForm):
     class Meta:
         model = Choice
 
-        fields = ['nama', 'pilihan']
+        fields = ['pertanyaan', 'nama', 'pilihan']
 
         Widgets = {
             'nama' : forms.TextInput(attrs={'class': 'form-input'}),

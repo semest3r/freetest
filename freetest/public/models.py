@@ -31,12 +31,7 @@ class Berita(models.Model):
         return self.title
 
     
-class Choice(models.Model):
-    nama = models.CharField(max_length=50)
-    pilihan = models.BooleanField(default=False)
 
-    def __str__(self):
-        return self.nama
 
 class Question(models.Model):
     pertanyaan = models.CharField(max_length=50)
@@ -44,5 +39,13 @@ class Question(models.Model):
 
     def __str__(self):
         return self.pertanyaan
-    
+
+class Choice(models.Model):
+    pertanyaan = models.ForeignKey(Question, on_delete=models.CASCADE, null=True)
+    nama = models.CharField(max_length=50)
+    pilihan = models.BooleanField(default=False)
+
+
+    def __str__(self):
+        return self.nama
     

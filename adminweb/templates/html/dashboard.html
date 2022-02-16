@@ -1,0 +1,61 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+<h1>berhasil landing dihalaman dashboard</h1>
+<div class="container" id="questions">
+  <div >
+    <form method="POST">
+      <table class="mx-auto" id="question1">
+        <thead>
+          <tr class="grid grid-cols-2 gap-10 p-5">
+            <th>question</th>
+            <th class="">
+              Jawaban
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for questions in question1 %}
+          <tr>      
+            <td>{{ questions.question }}</td>
+            <td>
+              <input type="checkbox" name="" id="">
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <div class="mx-auto text-center">
+        <button type="submit" class="border border-1 mx-auto">submit</button>
+      </div>
+
+    </form>
+  </div> 
+</div>
+<br>
+<hr>
+
+<div id="choices">
+    <table class="table-fixed w-5/6 mx-auto text-center" id="choice">
+        <thead>
+          <tr>
+            <th>user</th>
+            <th>question</th>
+            <th>answer</th>
+          </tr>
+          
+        </thead>
+        <tbody>
+        {% for choices in choice %}
+          <tr>
+            <td>{{ choices.user }}</td>
+            <td>{{ choices.checklist }}</td>
+            <td>{{ choices.question }}</td>
+            <td>{{ choices.user_id}}</td>
+            <td>{{ choices.question_id}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
